@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Nivel de heroi</title>
+</head>
+<body>
+    <script>
+        const img = document.createElement("img");
+        img.style.width = "98vw";
+        img.style.height = "95vh";
+        img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaNzXJjg5o8kxswWKbBgcYHh9BJlg97AxoDw&usqp=CAU";
+        document.body.appendChild(img);
+        window.addEventListener("load", function() {
+            XP = parseInt(prompt("Digite o XP do herói"));
+            let nivel =  "";
+            if(XP <= 1000)
+                nivel = "Ferro";
+            if(XP >= 1001 && XP <= 2000)
+                nivel = "Bronze";
+            if(XP >= 2001 && XP <= 5000)
+                nivel = "Prata";
+            if(XP >= 6001 && XP <= 7000)
+                nivel = "Ouro";
+            if(XP >= 7001 && XP <= 8000)
+                nivel = "Platina";
+            if(XP >= 8001 && XP <= 9000)
+                nivel = "Ascendente";
+            if(XP >= 9001 && XP <= 10000)
+                nivel = "Imortal";
+            if(XP >= 10001)
+                nivel = "Radiante";
+        
+            if(XP > 0) {
+                console.log("O nível do herói é: "+nivel);
+                alert("O nível do herói é: "+nivel);
+            }
+        })
+
+    </script>
+</body>
+</html>
