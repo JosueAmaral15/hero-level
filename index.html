@@ -12,8 +12,10 @@
         img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaNzXJjg5o8kxswWKbBgcYHh9BJlg97AxoDw&usqp=CAU";
         document.body.appendChild(img);
         window.addEventListener("load", function() {
-            XP = parseInt(prompt("Digite o XP do herói"));
-            while (XP > 0) {
+            let XP = 0;
+            let nome = prompt("Digite o nome do herói: ");
+            while (nome.length > 0) {
+                XP = parseInt(prompt("Digite o XP do herói: "));
                 let nivel =  "";
                 if(XP <= 1000)
                     nivel = "Ferro";
@@ -32,9 +34,9 @@
                 if(XP >= 10001)
                     nivel = "Radiante";
 
-                console.log("O nível do herói é: "+nivel);
-                alert("O nível do herói é: "+nivel);
-                XP = parseInt(prompt("Digite o XP do herói"));
+                console.log(`O Herói de nome ${nome} está no nível ${nivel}`);
+                alert(`O Herói de nome ${nome} está no nível ${nivel}`);
+                nome = prompt("Digite o nome do herói: ");
             }
         })
 
